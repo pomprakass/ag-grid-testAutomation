@@ -18,5 +18,25 @@ describe("Load AG Grid", () => {
     GridPage.columnHeader.forEach((el) => {
       expect(el.isDisplayed()).to.eql(true);
     });
+
+  });
+  /**
+   * @Modified by: OmPrakash
+   * @modified Date: 1-June-2021
+   * Added new tests
+   */
+  it("Should display grid side bar",()=>{
+    GridPage.sideBar.waitForDisplayed();
+    expect(GridPage.sideBar.isDisplayed()).to.eql(true);
+  });
+
+  /**
+   * @Modified by: OmPrakash
+   * @modified Date: 1-June-2021
+   * Added new tests
+   */
+   it("Should display main grid",()=>{
+    GridPage.mainGrid.waitForDisplayed();
+    expect(GridPage.mainGrid.isDisplayed()).to.eql(true);
   });
 });
